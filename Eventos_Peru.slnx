@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Eventos_Peru/Eventos_Peru.csproj" />
+  <Project Path="Eventos_Peru.Core/Eventos_Peru.Core.csproj" />
+</Solution>

@@ -1,0 +1,100 @@
+@host = http://localhost:5022
+
+GET {{host}}/api/Categoria
+###
+GET {{host}}/api/Categoria/1
+###
+GET {{host}}/api/Evento?estado=Publicado
+###
+GET {{host}}/api/Evento?idCategoria=1&desde=2026-11-01&hasta=2026-12-31&ubicacion=Lima
+###
+GET {{host}}/api/Evento/1
+###
+# Cambia los identificadores según los registros de tu base de datos.
+POST {{host}}/api/Categoria
+Content-Type: application/json
+
+{"nombre":"Teatro","descripcion":"Funciones teatrales"}
+###
+POST {{host}}/api/Evento
+Content-Type: application/json
+
+{
+  "idOrganizador": 2,
+  "idCategoria": 1,
+  "nombre": "Evento de prueba",
+  "descripcion": "Prueba del CRUD",
+  "fechaHoraInicio": "2026-12-20T18:00:00",
+  "fechaHoraFin": "2026-12-20T21:00:00",
+  "ubicacion": "Lima",
+  "aforoMaximo": 100,
+  "precio": 30.00,
+  "estado": "Borrador"
+}
+###
+PUT {{host}}/api/Categoria/5
+Content-Type: application/json
+
+{"idCategoria":5,"nombre":"Teatro","descripcion":"Descripción actualizada"}
+###
+DELETE {{host}}/api/Categoria/5
+
+###
+GET {{host}}/api/Usuario
+###
+GET {{host}}/api/Usuario/1
+
+###
+GET {{host}}/api/Rol
+###
+GET {{host}}/api/Rol/1
+
+###
+GET {{host}}/api/UsuarioRol
+###
+GET {{host}}/api/UsuarioRol/1/1
+
+###
+GET {{host}}/api/Interes
+###
+GET {{host}}/api/Interes/1
+
+###
+GET {{host}}/api/UsuarioInteres
+###
+GET {{host}}/api/UsuarioInteres/1/1
+
+###
+GET {{host}}/api/Compra
+###
+GET {{host}}/api/Compra/1
+
+###
+GET {{host}}/api/DetalleCompra
+###
+GET {{host}}/api/DetalleCompra/1
+
+###
+GET {{host}}/api/Entrada
+###
+GET {{host}}/api/Entrada/1
+
+###
+GET {{host}}/api/CheckIn
+###
+GET {{host}}/api/CheckIn/1
+
+###
+GET {{host}}/api/Resena
+###
+GET {{host}}/api/Resena/1
+
+###
+GET {{host}}/api/Notificacion
+###
+GET {{host}}/api/Notificacion/1
+
+###
+GET {{host}}/api/Moderacion
+###
+GET {{host}}/api/Moderacion/1
